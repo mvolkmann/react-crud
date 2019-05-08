@@ -1,0 +1,84 @@
+.crud {
+  @mixin rounded() {
+    border: solid lightgray 1px;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 4px;
+  }
+
+  display: inline-block;
+  text-align: left;
+
+  button {
+    border: none;
+    font-size: 24px;
+    margin: 0 5px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .row {
+    margin-bottom: 10px;
+
+    & > .input {
+      display: inline-block;
+    }
+
+    label {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 10px;
+      text-align: right;
+      width: 100px;
+    }
+
+    .radio {
+      display: inline-block;
+      
+      & > input {
+        margin-left: 0;
+      }
+
+      & > label {
+        font-weight: normal;
+        margin-left: 3px;
+        width: auto;
+      }
+    }
+
+    .range {
+      display: flex;
+      align-items: center;
+
+      & > input {
+        margin-right: 10px;
+      }
+    }
+
+    select {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  form {
+    button, input {
+      @include rounded();
+    }
+
+    input[type=checkbox] {
+      margin-left: 0;
+    }
+  }
+
+  select {
+    @include rounded();
+    font-size: 24px;
+    outline: none;
+    padding: 10px;
+  }
+}
